@@ -25,11 +25,10 @@ files.
 ## Installation
 
 ``` r
-# CRAN version
-install.packages("slackr")
+
 
 # Development version
-devtools::install_github("mrkaye97/slackr")
+devtools::install_github("abiodunGivelify/slackrAJ")
 ```
 
 ## Breaking Changes
