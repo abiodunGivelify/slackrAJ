@@ -17,7 +17,7 @@ slackr_delete <- function(
     abort("token must be a character vector of length one")
   }
 
-  channel_translated <- slackr_chtrans(channel, token)
+  #channel_translated <- slackr_chtrans(channel, token)
 
   timestamps <- slackr_history(channel = channel, message_count = count, paginate = FALSE)[["ts"]]
 
