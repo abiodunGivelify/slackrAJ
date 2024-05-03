@@ -27,7 +27,8 @@ slackr_delete <- function(
       token = token,
       .method = POST,
       body = list(
-        channel = channel_translated,
+        #channel = channel_translated,
+        channel = channel
         ts = ts
       )
     )
