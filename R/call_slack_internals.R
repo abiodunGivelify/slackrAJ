@@ -48,6 +48,28 @@ list_users <- function(token, ...) {
   )
 }
 
+
+#' Lists all messages in a Slack channel.
+#' @inheritParams auth_test
+#' @keywords internal
+#' @noRd
+#' @references https://api.slack.com/methods/users.list
+list_messages <- function(token, ...) {
+  with_pagination(
+    function(cursor) {
+      call_slack_api(
+        "/api/conversations.history",
+        .method = GET,
+        token = token,
+        ...,
+        .next_cursor = cursor
+      )
+    },
+    extract = "conversations"
+  )
+}
+
+
 #' Sends a message to a channel.
 #'
 #' @inheritParams auth_test
