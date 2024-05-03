@@ -178,6 +178,6 @@ slackr_msg <- function(
     reply_broadcast = reply_broadcast,
     ...
   )
-
+  print("I love AJ")
   invisible(z)
 }
